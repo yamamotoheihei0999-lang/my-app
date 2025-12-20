@@ -19,8 +19,23 @@
 
 /* Services */
 .services .section-title { font-size: 1.6rem; margin-bottom: 16px; }
-.service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-.service-item { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+/* Horizontal single-row layout with responsive scrolling */
+.service-list {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+.service-item {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex: 0 0 calc((100% - 36px) / 3); /* three items side-by-side */
+  min-width: 240px;
+}
 .service-title { margin-top: 12px; margin-bottom: 8px; font-size: 1.1rem; }
 .service-text { margin-bottom: 12px; color: #555; }
 .service-link { color: #1f6feb; font-weight: 600; }
