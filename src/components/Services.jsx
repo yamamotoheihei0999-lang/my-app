@@ -1,0 +1,37 @@
+import React from 'react'
+import web from '../assets/service-web.svg'
+import design from '../assets/service-design.svg'
+import printImg from '../assets/service-print.svg'
+
+function ServiceItem({ img, title, text }) {
+  return (
+    <article className="service-item">
+      <img src={img} alt={title} />
+      <h3 className="service-title">{title}</h3>
+      <p className="service-text">{text}</p>
+      <a href="#" className="service-link">詳しく見る</a>
+    </article>
+  )
+}
+
+export default function Services() {
+  return (
+    <div className="service-list">
+      <ServiceItem
+        img={web}
+        title="Web制作"
+        text="貴社のニーズに合わせた高品質なWebサイトを制作します。"
+      />
+      <ServiceItem
+        img={design}
+        title="グラフィックデザイン"
+        text="ブランドアイデンティティを高めるクリエイティブなデザインを提供します。"
+      />
+      <ServiceItem
+        img={printImg}
+        title="印刷物制作"
+        text="視覚的に訴求力のある高品質な印刷物を作成します。"
+      />
+    </div>
+  )
+}
