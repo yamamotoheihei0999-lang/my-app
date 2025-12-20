@@ -12,8 +12,8 @@
 .nav-list a { font-weight: 500; }
 
 /* Hero */
-.hero { margin: 24px 0; }
-.hero img { width: 100%; border-radius: 8px; }
+.hero { margin: 24px 0; height: 25vh; min-height: 160px; overflow: hidden; display: flex; align-items: center; border-radius: 8px; }
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Services */
 .services .section-title { font-size: 1.6rem; margin-bottom: 16px; }
