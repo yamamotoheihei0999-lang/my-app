@@ -3,13 +3,13 @@ import web from '../assets/service-web.svg'
 import design from '../assets/service-design.svg'
 import printImg from '../assets/service-print.svg'
 
-function ServiceItem({ img, title, text }) {
+function ServiceItem({ img, title, text, href = '#' }) {
   return (
     <article className="service-item">
       <img src={img} alt={title} />
       <h3 className="service-title">{title}</h3>
       <p className="service-text">{text}</p>
-      <a href="#" className="service-link">詳しく見る</a>
+      <a href={href} className="service-link" target="_blank" rel="noopener noreferrer">詳しく見る</a>
     </article>
   )
 }
@@ -21,6 +21,7 @@ export default function Services() {
         img={web}
         title="Web制作"
         text="貴社のニーズに合わせた高品質なWebサイトを制作します。"
+        href="https://tatu1206.github.io/it_test/"
       />
       <ServiceItem
         img={design}
