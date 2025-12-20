@@ -37,3 +37,7 @@ If you are developing a production application, we recommend using TypeScript wi
   - 例: `<meta property="og:image" content="/images/og-image.svg" />`
 
 - 命名規則や最適化: 小文字・ハイフンで命名し、できれば WebP などで最適化してください。
+
+### 画像最適化のメモ
+- 本番では `cwebp` や `imagemin`、`sharp` などで WebP / JPEG を生成し、ブレークポイントごとに適切なサイズを用意してください。
+- 例の実装では `public/images/photo-1-1600.webp` / `photo-1-1024.webp` といった WebP を優先し、フォールバックで JPEG を指定しています。
