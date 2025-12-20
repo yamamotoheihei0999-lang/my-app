@@ -13,7 +13,9 @@
 
 /* Hero */
 .hero { margin: 24px 0; height: 25vh; min-height: 160px; overflow: hidden; display: flex; align-items: center; border-radius: 8px; position: relative; }
-.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Make picture and its img fill the area and use cover */
+.hero picture, .hero img { width: 100%; height: 100%; display: block; }
+.hero img { object-fit: cover; }
 
 /* Services */
 .services .section-title { font-size: 1.6rem; margin-bottom: 16px; }
