@@ -41,3 +41,15 @@ If you are developing a production application, we recommend using TypeScript wi
 ### 画像最適化のメモ
 - 本番では `cwebp` や `imagemin`、`sharp` などで WebP / JPEG を生成し、ブレークポイントごとに適切なサイズを用意してください。
 - 例の実装では `public/images/photo-1-1600.webp` / `photo-1-1024.webp` といった WebP を優先し、フォールバックで JPEG を指定しています。
+
+### 画像ビルドスクリプト
+- 画像の自動生成には `scripts/image-build.cjs` を用意しています。`public/images/photo-1.jpg` を基に、1600/1024/768 の WebP と JPEG を生成します。
+- 実行:
+  ```bash
+  npm run images:build
+  ```
+- 生成されるファイル例:
+  - `public/images/photo-1-1600.webp`, `public/images/photo-1-1600.jpg`
+  - `public/images/photo-1-1024.webp`, `public/images/photo-1-1024.jpg`
+  - `public/images/photo-1-768.webp`, `public/images/photo-1-768.jpg`
+  - `public/images/photo-1.webp` (webp の元サイズフォールバック)
