@@ -24,3 +24,16 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## 画像の置き場所（推奨）
+
+- コンポーネントから import して使う画像: `src/assets/images/` に配置します（ビルド時にバンドラが処理します）。
+  - 例: `import hero from './assets/images/sample-photo.svg'`  
+    `<img src={hero} alt="メインビジュアル" loading="lazy" />`
+
+- 直接 URL で参照する静的ファイル（OG 画像、固定パスで配るもの）: `public/images/` に配置します。
+  - 例: `<meta property="og:image" content="/images/og-image.svg" />`
+
+- 命名規則や最適化: 小文字・ハイフンで命名し、できれば WebP などで最適化してください。
