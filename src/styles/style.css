@@ -12,9 +12,8 @@
 .nav-list a { font-weight: 500; }
 
 /* Hero */
-.hero { margin: 24px 0; height: 25vh; min-height: 160px; overflow: hidden; position: relative; border-radius: 8px; }
-/* Center image and double horizontal scale (scaleX) while keeping vertical size */
-.hero img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(2, 1); height: 100%; width: auto; object-fit: cover; display: block; }
+.hero { margin: 24px 0; height: 25vh; min-height: 160px; overflow: hidden; display: flex; align-items: center; border-radius: 8px; position: relative; }
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Services */
 .services .section-title { font-size: 1.6rem; margin-bottom: 16px; }
