@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import '../styles/style.css'
 
@@ -13,7 +14,7 @@ export default function Header() {
 
         <nav className="global-nav" aria-label="グローバルナビゲーション">
           <ul className="nav-list">
-            <li><a href="#top">トップ</a></li>
+            <li><Link to="/">トップ</Link></li>
             <li><a href="#topics">トピックス</a></li>
             <li><a href="#access">アクセス</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
