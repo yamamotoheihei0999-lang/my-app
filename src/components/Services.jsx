@@ -1,5 +1,5 @@
 import React from 'react'
-import photoWeb from '/images/photo-2.png'
+import photoWeb from '../assets/images/photo-2.png'
 import design from '../assets/service-design.svg'
 import printImg from '../assets/service-print.svg'
 
