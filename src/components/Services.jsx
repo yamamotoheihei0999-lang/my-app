@@ -1,5 +1,5 @@
 import React from 'react'
-import web from '../assets/service-web.svg'
+import web from '../../public/images/photo-2.png'
 import design from '../assets/service-design.svg'
 import printImg from '../assets/service-print.svg'
 
@@ -27,6 +27,7 @@ export default function Services() {
         img={design}
         title="グラフィックデザイン"
         text="ブランドアイデンティティを高めるクリエイティブなデザインを提供します。"
+        href="https://tatu1206.github.io/snow/"
       />
       <ServiceItem
         img={printImg}
