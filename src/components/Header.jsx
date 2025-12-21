@@ -15,8 +15,6 @@ export default function Header() {
           <ul className="nav-list">
             <li><a href="#top">トップ</a></li>
             <li><a href="#topics">トピックス</a></li>
-            <li><a href="#services">事業内容</a></li>
-            <li><a href="#works">事例紹介</a></li>
             <li><a href="#access">アクセス</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
           </ul>
