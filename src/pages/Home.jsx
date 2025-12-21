@@ -14,15 +14,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="services container">
-        <h2 className="section-title">事業内容</h2>
-        <Services />
-      </section>
-
-      <section id="works" className="works container">
-        <h2 className="section-title">事例紹介</h2>
-      </section>
-
       <section id="access" className="access container">
         <h2 className="section-title">アクセス</h2>
       </section>
