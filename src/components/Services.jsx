@@ -33,6 +33,7 @@ export default function Services() {
         img={printImg}
         title="印刷物制作"
         text="視覚的に訴求力のある高品質な印刷物を作成します。"
+        href="/no-data"
       />
     </div>
   )
