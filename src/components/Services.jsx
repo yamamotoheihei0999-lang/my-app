@@ -1,4 +1,5 @@
 import React from 'react'
+import photoWeb from '/images/photo-2.png'
 import design from '../assets/service-design.svg'
 import printImg from '../assets/service-print.svg'
 
@@ -17,7 +18,7 @@ export default function Services() {
   return (
     <div className="service-list">
       <ServiceItem
-        img="/images/photo-2.png"
+        img={photoWeb}
         title="Web制作"
         text="貴社のニーズに合わせた高品質なWebサイトを制作します。"
         href="https://tatu1206.github.io/it_test/"
