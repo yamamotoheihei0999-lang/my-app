@@ -1,25 +1,24 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
-function ServiceItem({ img, title, text, href, isExternal = true }) {
-  const content = (
-    <>
+interface ServiceItemProps {
+  img: string
+  title: string
+  text: string
+  href: string
+  isExternal?: boolean
+}
+
+function ServiceItem({ img, title, text, href, isExternal = true }: ServiceItemProps) {
+  return (
+    <article className="service-item">
       <img src={img} alt={title} />
       <h3 className="service-title">{title}</h3>
       <p className="service-text">{text}</p>
-    </>
-  )
-
-  return (
-    <article className="service-item">
       {isExternal ? (
-        <a href={href} className="service-item-link" target="_blank" rel="noopener noreferrer">
-          {content}
-        </a>
+        <a href={href} className="service-link" target="_blank" rel="noopener noreferrer">詳しく見る</a>
       ) : (
-        <Link to={href} className="service-item-link">
-          {content}
-        </Link>
+        <Link to={href} className="service-link">詳しく見る</Link>
       )}
     </article>
   )

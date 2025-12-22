@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '../components/Hero.jsx'
-import Services from '../components/Services.jsx'
-import Sidebar from '../components/Sidebar.jsx'
+import Hero from '../components/Hero'
+import Services from '../components/Services'
+import Sidebar from '../components/Sidebar'
 
 export default function Home() {
   return (
