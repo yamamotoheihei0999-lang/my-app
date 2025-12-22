@@ -16,13 +16,13 @@ export default function Sidebar() {
           <li><a href="#">レビュー</a></li>
           <li><a href="#">お知らせ</a></li>
         </ul>
-          <FireIcon size={18} />
-          <span>人気記事</span>
-        
       </div>
 
       <div className="sidebar-section">
-        <h3 className="sidebar-title">人気記事</h3>
+        <h3 className="sidebar-title">
+          <FireIcon size={18} />
+          <span>人気記事</span>
+        </h3>
         <ul className="sidebar-post-list">
           <li className="sidebar-post-item">
             <a href="#">
@@ -51,12 +51,12 @@ export default function Sidebar() {
           </li>
         </ul>
       </div>
-          <TagIcon size={18} />
-          <span>タグ</span>
-        
 
       <div className="sidebar-section">
-        <h3 className="sidebar-title">タグ</h3>
+        <h3 className="sidebar-title">
+          <TagIcon size={18} />
+          <span>タグ</span>
+        </h3>
         <div className="sidebar-tags">
           <a href="#" className="tag-item">React</a>
           <a href="#" className="tag-item">TypeScript</a>
