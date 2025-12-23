@@ -4,6 +4,7 @@
 /* Main layout with sidebar */
 .page-layout {
   display: flex;
+  flex-direction: row;
   gap: 24px;
   align-items: flex-start;
   max-width: 1100px;
@@ -21,6 +22,7 @@
   flex: 0 0 260px;
   position: sticky;
   top: 20px;
+  min-width: 260px;
 }
 
 .sidebar-section {
@@ -212,11 +214,9 @@
 .services .section-title { font-size: 1.6rem; margin-bottom: 16px; }
 /* Horizontal single-row layout with responsive scrolling */
 .service-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  align-items: stretch;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 8px;
 }
 .service-item {
@@ -224,9 +224,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  flex: 0 0 calc((100% - 36px) / 3);
-  min-width: 240px;
-  max-width: 320px;
+  min-width: 220px;
   position: relative;
 }
 
@@ -244,8 +242,10 @@
 
 .service-item img {
   width: 100%;
-  height: auto;
+  height: 200px;
   display: block;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .service-title { margin-top: 12px; margin-bottom: 8px; font-size: 1.1rem; }
@@ -274,8 +274,161 @@
   .carousel-track::-webkit-scrollbar-thumb:hover { background: #777; }
 }
 
+/* IDCS Game Page */
+.idcs-game-container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.game-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.game-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+}
+
+.cookie-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.cookie-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.cookie-textarea:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.submit-btn {
+  background: #1f6feb;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #0d4db3;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.result-box {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f6f8fa;
+  border-radius: 6px;
+  border-left: 4px solid #1f6feb;
+}
+
+.result-box h3 {
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.result-box pre {
+  margin: 0;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #555;
+  line-height: 1.6;
+}
+
+.game-info {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.game-info h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.game-info ol {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  line-height: 1.8;
+  color: #555;
+}
+
+.github-link-text {
+  margin: 0;
+  color: #666;
+}
+
+.inline-link {
+  color: #1f6feb;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .game-title { color: #eee; }
+  .game-description { color: #aaa; }
+  .game-card { background: #1a1a1a; }
+  .form-group label { color: #eee; }
+  .cookie-textarea { background: #111; color: #ddd; border-color: #333; }
+  .result-box { background: #222; border-left-color: #58a6ff; }
+  .result-box h3 { color: #eee; }
+  .result-box pre { color: #ccc; }
+  .game-info { background: #1a1a1a; }
+  .game-info h3 { color: #eee; }
+  .game-info ol { color: #ccc; }
+  .github-link-text { color: #aaa; }
+  .inline-link { color: #58a6ff; }
+}
+
 /* Responsive layout */
-@media (max-width: 968px) {
+/* レスポンシブ対応を無効化 - サイドバーを常に横に表示 */
+/* @media (max-width: 968px) {
   .page-layout {
     flex-direction: column;
   }
@@ -290,4 +443,4 @@
   .main-content {
     width: 100%;
   }
-}
+*/

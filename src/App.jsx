@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header.jsx'
-import Home from './pages/Home.jsx'
-import NoData from './pages/NoData.jsx'
-import Footer from './components/Footer.jsx'
+import Header from './components/Header'
+import Home from './pages/Home'
+import NoData from './pages/NoData'
+import TargetGame from './pages/TargetGame'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/no-data" element={<NoData />} />
+        <Route path="/target-game" element={<TargetGame />} />
       </Routes>
       <Footer />
     </Router>

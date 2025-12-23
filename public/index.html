@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>的当てゲーム Web版</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: "Meiryo", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .screen {
+      display: none;
+      width: 800px;
+      height: 600px;
+      box-sizing: border-box;
+      background: #222;
+      border: 2px solid #fff;
+      position: relative;
+      padding: 20px;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    h1, h2 {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .center-buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 24px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .primary {
+      background: #ff88aa;
+      color: #222;
+    }
+
+    .secondary {
+      background: #555;
+      color: #fff;
+    }
+
+    #gameCanvas {
+      border: 2px solid #fff;
+      background: #000;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .back-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    #galleryImages {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    #galleryImages img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #fff;
+    }
+
+    .setting-row {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    input[type="range"] {
+      width: 60%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- タイトル画面 -->
+  <div id="titleScreen" class="screen active">
+    <h1>的当てゲーム</h1>
+    <div class="center-buttons">
+      <button id="startBtn" class="primary">スタート</button>
+      <button id="galleryBtn" class="secondary">ギャラリー</button>
+      <button id="settingBtn" class="secondary">設定</button>
+    </div>
+  </div>
+
+  <!-- ギャラリー画面 -->
+  <div id="galleryScreen" class="screen">
+    <h2>ギャラリー</h2>
+    <div id="galleryImages"></div>
+    <button class="back-btn secondary" id="galleryBackBtn">戻る</button>
+  </div>
+
+  <!-- 設定画面 -->
+  <div id="settingScreen" class="screen">
+    <h2>設定</h2>
+    <div class="setting-row">
+      <p>音量調整</p>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+    </div>
+    <button class="back-btn secondary" id="settingBackBtn">戻る</button>
+  </div>
+
+  <!-- ゲーム画面 -->
+  <div id="gameScreen" class="screen">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <button class="back-btn secondary" id="gameBackBtn">タイトルに戻る</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
