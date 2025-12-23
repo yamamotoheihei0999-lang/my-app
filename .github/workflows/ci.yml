@@ -1,0 +1,11 @@
+name: CI (disabled)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "CI workflow has been disabled; see .github/workflows/ci-simple.yml instead"
+

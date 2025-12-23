@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="webGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#webGrad)"/>
+  <rect x="150" y="150" width="500" height="300" rx="10" fill="rgba(255,255,255,0.9)"/>
+  <rect x="180" y="180" width="440" height="30" rx="5" fill="#e0e0e0"/>
+  <rect x="180" y="230" width="440" height="180" rx="5" fill="#f5f5f5"/>
+  <circle cx="200" cy="195" r="8" fill="#ff6b6b"/>
+  <circle cx="225" cy="195" r="8" fill="#ffd93d"/>
+  <circle cx="250" cy="195" r="8" fill="#6bcf7f"/>
+  <text x="400" y="500" font-size="48" fill="white" text-anchor="middle" dy=".3em" font-family="system-ui, sans-serif" font-weight="bold">Web制作</text>
+</svg>
