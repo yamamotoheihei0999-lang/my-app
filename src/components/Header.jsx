@@ -17,7 +17,6 @@ export default function Header() {
             <li><Link to="/">トップ</Link></li>
             <li><a href="#topics">トピックス</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
-            <li><Link to="/target-game">🎯 ゲーム</Link></li>
           </ul>
         </nav>
       </div>
